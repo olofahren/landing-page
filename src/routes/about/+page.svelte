@@ -7,9 +7,11 @@
         <p class="subtext mt-5 text-lg md:text-xl text-white/90">In the meantime, take a look at this amazing photo</p>
         <div class="mt-10 flex justify-center">
             <FoldIn as="div" innerAs="div" className="flex flex-row gap-4">
+                <!-- svelte-ignore a11y_img_redundant_alt -->
                 <img
                     src="src/lib/assets/profile.jpeg"
                     class="h-auto w-64 rounded-lg object-cover"
+                    alt="profile picture"
                 />
             </FoldIn>
 	</div>
