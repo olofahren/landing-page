@@ -4,7 +4,7 @@
 	const isActive = (path: string) => currentPath === path;
 </script>
 
-<nav class="site-menu fixed left-20 top-1/2 z-10 -translate-y-1/2" aria-label="Main navigation">
+<nav class="site-menu fixed left-20 top-1/2 z-10 -translate-y-1/2 mt-4" aria-label="Main navigation">
 	<ul>
 		<li class:active={isActive('/')}><a href="/" aria-current={isActive('/') ? 'page' : undefined}>home</a></li>
 		<li class:active={isActive('/about')}><a href="/about" aria-current={isActive('/about') ? 'page' : undefined}>about</a></li>
