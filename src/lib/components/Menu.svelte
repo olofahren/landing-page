@@ -9,9 +9,10 @@
 		<li class:active={isActive('/')}><a href="/" aria-current={isActive('/') ? 'page' : undefined}>home</a></li>
 		<li class:active={isActive('/about')}><a href="/about" aria-current={isActive('/about') ? 'page' : undefined}>about</a></li>
 		<li>
-			projects
+			hobby projects
 			<ul class="pl-2">
-				<li><a href="https://bus.olof.site">Västertull tidstabell</a></li>
+				<li><a href="https://bus.olof.site">Västertull tidstabell for rpi displays</a></li>
+                <li><a href="https://github.com/olofahren/GooglePhotosMetadataFixer">Google Photos Metadata fixer</a></li>
 			</ul>
 		</li>
 		<li class:active={isActive('/contact')}><a href="/contact" aria-current={isActive('/contact') ? 'page' : undefined}>contact</a></li>

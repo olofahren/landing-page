@@ -1,6 +1,7 @@
 <script lang="ts">
 	import FoldIn from '$lib/components/FoldIn.svelte';
 	import profileImg from '$lib/assets/profile.jpeg';
+	import githubLogo from '$lib/assets/github-logo.png';
 </script>
 
 <section class="hero w-full h-screen flex items-center justify-center text-white">
@@ -39,6 +40,25 @@
 							<img
 								src={profileImg}
 								alt="Email icon"
+								class="h-full w-full object-cover"
+							/>
+						</div>
+					</div>
+				</FoldIn>
+			</li>
+			<li class="flex items-center justify-center md:justify-end py-1">
+				<FoldIn as="div" innerAs="div" className="flex flex-row gap-4" delay={0.08}>
+					<div class="flex flex-row align-center gap-4">
+						<a
+							href="https://www.github.com/olofahren"
+							class="min-w-0 break-all text-left text-sm text-white/90 underline-offset-4 transition-colors hover:text-white hover:underline md:text-base self-center"
+						>
+							olofahren
+						</a>
+						<div class="mr-3 flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded">
+							<img
+								src={githubLogo}
+								alt="GitHub icon"
 								class="h-full w-full object-cover"
 							/>
 						</div>
