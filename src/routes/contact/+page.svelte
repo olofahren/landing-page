@@ -1,5 +1,6 @@
 <script lang="ts">
 	import FoldIn from '$lib/components/FoldIn.svelte';
+	import profileImg from '$lib/assets/profile.jpeg';
 </script>
 
 <section class="hero w-full h-screen flex items-center justify-center text-white">
@@ -36,7 +37,7 @@
 						</a>
 						<div class="mr-3 flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded">
 							<img
-								src="src/lib/assets/profile.jpeg"
+								src={profileImg}
 								alt="Email icon"
 								class="h-full w-full object-cover"
 							/>
