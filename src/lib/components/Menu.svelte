@@ -1,8 +1,16 @@
 <script lang="ts">
+	import Eyes from "./Eyes.svelte";
+
 	let { currentPath = '/' }: { currentPath?: string } = $props();
 
 	const isActive = (path: string) => currentPath === path;
 </script>
+
+<div class="guy absolute left-80 bottom-0 z-20 bg-zinc-900 rounded-t-4xl">
+	<div class="relative w-full h-full">
+		<Eyes></Eyes>
+	</div>
+</div>
 
 <nav class="site-menu fixed left-20 top-1/2 z-10 -translate-y-1/2 mt-4" aria-label="Main navigation">
 	<ul>
@@ -47,6 +55,17 @@
 	.site-menu a {
 		color: inherit;
 		text-decoration: none;
+	}
+
+	.guy {
+		overflow: hidden;
+		height: 70px;
+		transition: height 220ms ease-in-out, width 540ms ease-in-out, background-color 220ms ease-in-out;
+	}
+
+	.guy:hover {
+		height: 300px;
+		background-color: rgb(255, 255, 255);
 	}
 
     @media (max-width:900px){

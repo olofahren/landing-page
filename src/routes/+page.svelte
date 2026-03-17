@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import { gsap } from 'gsap';
     import FoldIn from '$lib/components/FoldIn.svelte';
+	import Eyes from '$lib/components/Eyes.svelte';
 
     onMount(() => {
         gsap.fromTo(
@@ -10,8 +11,8 @@
             { y: 0, opacity: 1, filter: 'blur(0px)', duration: 0.9 },
         );
     });
-</script>
 
+</script>
 
 <section class="hero w-full h-screen flex items-center justify-center text-white">
 
@@ -23,7 +24,11 @@
     </div>
 </section>
 
-<style scoped>
+<section>
+
+</section>
+
+<style scoped>  
     .hero {
         perspective: 1200px;
     }
