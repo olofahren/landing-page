@@ -1,0 +1,7 @@
+services:
+  landing-page:
+    build: .
+    container_name: landing-page
+    expose:
+      - "80"
+    restart: unless-stopped
