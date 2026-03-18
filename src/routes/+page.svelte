@@ -20,7 +20,7 @@
         <h1 class="text-4xl md:text-8xl font-semibold tracking-tight leading-[1.05]">
             <FoldIn>Tjena!</FoldIn>
         </h1>
-        <p class="subtext mt-5 text-lg md:text-xl text-white">kul att du har hittat hit :) AAAAAAAAAAAAAAAAAAAAAAAAAaaa</p>
+        <p class="subtext mt-5 text-lg md:text-xl text-white">kul att du har hittat hit :) AAAAAAAAAAAAAAAAAAAAAAAAAaaa KATTEN TEST</p>
     </div>
 </section>
 
