@@ -63,11 +63,6 @@
 		transition: height 220ms ease-in-out, width 540ms ease-in-out, background-color 220ms ease-in-out;
 	}
 
-	.guy:hover {
-		height: 300px;
-		background-color: rgb(255, 255, 255);
-	}
-
     @media (max-width:900px){
         .site-menu{
             top:10%;

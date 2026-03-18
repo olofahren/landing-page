@@ -66,21 +66,6 @@
     </div>
 
 <style>
-    .lid-wrapper {
-        position: relative;
-        display: inline-flex;
-        overflow: hidden;
-    }
-
-    .lid {
-        position: absolute;
-        inset: 0;
-        background: #000000;
-        z-index: 2;
-        pointer-events: none;
-        transform: translateY(0);
-    }
-
     .eyes {
         display: flex;
         gap: 10px;
