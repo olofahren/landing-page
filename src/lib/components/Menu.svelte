@@ -6,8 +6,8 @@
 	const isActive = (path: string) => currentPath === path;
 </script>
 
-<div class="guy absolute left-80 bottom-0 z-20 bg-zinc-900 rounded-t-4xl">
-	<div class="relative w-full h-full">
+<div class="guy absolute bottom-0 z-20">
+	<div class="relative h-full bg-zinc-900 rounded-t-4xl ml-10">
 		<Eyes></Eyes>
 	</div>
 </div>

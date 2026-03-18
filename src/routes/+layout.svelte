@@ -13,6 +13,7 @@
 	onMount(() => {
 		const cursorElement = document.querySelector('.global-cursor') as HTMLElement | null;
 		if (!cursorElement) return;
+		if(window.innerWidth < 600) return; // disable custom cursor on small screens
 
 		document.body.classList.add('custom-cursor-active');
 
