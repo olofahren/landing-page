@@ -18,7 +18,7 @@
 
     <div class="text-center px-8">
         <h1 class="text-4xl md:text-8xl font-semibold tracking-tight leading-[1.05]">
-            <FoldIn>Tjena!</FoldIn>
+            <FoldIn>Halloj!</FoldIn>
         </h1>
         <p class="subtext mt-5 text-lg md:text-xl text-white">kul att du har hittat hit :)</p>
     </div>
