@@ -44,6 +44,7 @@
 <div class="global-cursor" aria-hidden="true">
 	<img src={cursor} alt="" draggable="false" />
 </div>
+
 <div class="min-h-screen bg-cover bg-center bg-no-repeat" style={`background-image: url(${bgImage});`}>
 	<Menu currentPath={page.url.pathname} />
 	{@render children()}

@@ -1,13 +1,43 @@
 <script lang="ts">
+	import { onMount } from "svelte";
 	import Eyes from "./Eyes.svelte";
 
 	let { currentPath = '/' }: { currentPath?: string } = $props();
+	let counter = $state(0);
 
 	const isActive = (path: string) => currentPath === path;
+
+	onMount(() => {
+		        void (async () => {
+            try {
+                const res = await fetch('/api/visits', { method: 'GET' });
+                const json = await res.json();
+				console.log('Visitor count API response:', json);
+                if (!res.ok) {
+                    console.error('Counter API error:', json);
+                    return;
+                }
+                counter = json.count ?? 0;
+            } catch (err) {
+                console.error('Error updating/fetching visitor count:', err);
+            }
+        })();
+	})
+
+
+
 </script>
 
-<div class="guy absolute bottom-0 right-0 z-20">
-	<div class="relative h-full bg-zinc-900 rounded-t-4xl mr-10">
+<div class="absolute bottom-0 right-0 z-20 flex flex-col items-end justify-end overflow-visible">
+
+	<div class="mr-10 mb-2 flex flex-col items-end">
+		<div class="bg-white rounded-full p-4">
+			<p class="text-sm text-black text-center whitespace-nowrap">Du är besökare {counter}</p>
+		</div>
+		<div class="-mt-3 mr-6 h-8 w-4 rotate-45 bg-white rounded-tr-sm rounded-br-md rounded-bl-md"></div>
+	</div>
+	
+	<div class="mr-10 rounded-t-4xl bg-zinc-900">
 		<Eyes></Eyes>
 	</div>
 </div>
@@ -55,12 +85,6 @@
 	.site-menu a {
 		color: inherit;
 		text-decoration: none;
-	}
-
-	.guy {
-		overflow: hidden;
-		height: 70px;
-		transition: height 220ms ease-in-out, width 540ms ease-in-out, background-color 220ms ease-in-out;
 	}
 
     @media (max-width:900px){
