@@ -2,7 +2,10 @@
     import { onMount } from 'svelte';
     import { gsap } from 'gsap';
     import FoldIn from '$lib/components/FoldIn.svelte';
-	import Eyes from '$lib/components/Eyes.svelte';
+    import type { PageData } from './$types';
+
+    let { data }: { data: PageData } = $props();
+    let counter = $state(0);
 
     onMount(() => {
         gsap.fromTo(
@@ -10,6 +13,23 @@
             { y: 18, opacity: 0, filter: 'blur(10px)' },
             { y: 0, opacity: 1, filter: 'blur(0px)', duration: 0.9 },
         );
+
+        void (async () => {
+            try {
+                const res = await fetch('/api/visits', { method: 'POST' });
+                const json = await res.json();
+                if (!res.ok) {
+                    console.error('Counter API error:', json);
+                    return;
+                }
+                counter = json.count ?? 0;
+            } catch (err) {
+                console.error('Error updating/fetching visitor count:', err);
+            }
+        })();
+
+
+    
     });
 
 </script>
